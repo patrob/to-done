@@ -125,7 +125,11 @@ export default function TodoApp() {
 
         <TodoForm onAddTodo={addTodo} />
 
-        <Tabs defaultValue="active" className="mt-8" onValueChange={setActiveTab}>
+        <Tabs
+          defaultValue="active"
+          className="mt-8"
+          onValueChange={setActiveTab}
+        >
           <TabsList className="grid grid-cols-3 mb-6">
             <TabsTrigger value="all">All</TabsTrigger>
             <TabsTrigger value="active">Active</TabsTrigger>
