@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  mongodb:
+    image: mongo:4.4
+    container_name: ${MONGO_CONTAINER_NAME:-todone-mongodb}
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=${MONGO_ROOT_USERNAME:-admin}
+      - MONGO_INITDB_ROOT_PASSWORD=${MONGO_ROOT_PASSWORD:-todonepass}
+      - MONGO_INITDB_DATABASE=${MONGO_DATABASE:-todone}
+    ports:
+      - "${MONGO_PORT:-27017}:27017"
+    volumes:
+      - mongodb_data:/data/db
+    restart: unless-stopped
+    command: ["--wiredTigerCacheSizeGB=1"]
+
+volumes:
+  mongodb_data:
+    name: ${MONGO_VOLUME_NAME:-todone-mongodb-data}

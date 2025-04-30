@@ -1,0 +1,26 @@
+# General
+node_modules/
+dist/
+.env
+.DS_Store
+.vscode/
+.idea/
+*.log
+*.lock
+
+# Frontend (React + Vite)
+frontend/node_modules/
+frontend/dist/
+frontend/.env.local
+frontend/.env.development
+frontend/.env.production
+
+# Backend (Express + GraphQL)
+backend/node_modules/
+backend/dist/
+backend/.env.local
+backend/.env.development
+backend/.env.production
+
+# TypeScript
+*.tsbuildinfo
