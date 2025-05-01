@@ -2,6 +2,8 @@
 
 A modern task management application built with Next.js, Express, GraphQL, and MongoDB.
 
+<img width="734" alt="image" src="https://github.com/user-attachments/assets/ee866c45-dfe4-44a2-a0cf-74c18fae71a2" />
+
 ## Tech Stack
 
 ### Frontend
