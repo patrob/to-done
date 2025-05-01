@@ -18,7 +18,7 @@ async function startServer() {
   });
 
   await server.start();
-  server.applyMiddleware({ app });
+  await server.applyMiddleware({ app: app as any });
 
   const PORT = process.env.PORT || 4000;
   const MONGODB_URI =
@@ -41,3 +41,4 @@ async function startServer() {
 }
 
 startServer();
+
